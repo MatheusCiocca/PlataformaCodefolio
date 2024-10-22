@@ -1,0 +1,196 @@
+.topbarContainer {
+  background-color: #6A0DAD;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(166, 159, 166, 1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(166, 159, 166, 1);
+  box-shadow: 0px 1px 5px 0px rgba(166, 159, 166, 1);
+}
+
+.topbarLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+  font-family: cursive;
+  opacity: 0.8;
+}
+
+.topbarLeft2 {
+  width: 260px;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar {
+  width: 430px;
+  max-width: 600px;
+  height: 40px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searchIcon {
+  font-size: 20px !important;
+  margin-right: 10px;
+  color: #555;
+}
+
+.searchInput {
+  background-color: whitesmoke;
+  border: none;
+  width: 1000%;
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.searchInput:focus {
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+.topbarCenter {
+  flex: 3;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.topbarRight {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.topbarIcons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Garante que os ícones estejam igualmente espaçados */
+  gap: 0; /* Remove qualquer gap extra */
+}
+
+.topbarIconItem {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  background-color: tomato;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.topbarImg {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.topbarIconCont {
+  display: flex;
+  flex-direction: column; /* Alinha ícone e texto verticalmente */
+  align-items: center; /* Alinha os ícones verticalmente ao centro */
+  justify-content: center; /* Alinha os ícones horizontalmente ao centro */
+  height: 70px;
+  width: 70px;
+  margin-right: 5px; /* Remove o espaço entre os ícones */
+  padding: 0; /* Remove qualquer padding extra */
+  color: white;
+}
+
+.topbarIconText {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-top: 2px; /* Espaço entre o ícone e o texto */
+}
+
+.topbarIconCont:hover {
+  background-color: white;
+  color: black;
+
+  .topbarIconText {
+    color: black;
+  }
+}
+
+.topbarIconCont:active {
+  background-color: rgb(212, 203, 203);
+}
+
+.topbarHomeIcon::after {
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+.topbarCenterIcon {
+  height: 45px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .topbarCenter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .searchbar {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .searchbar {
+    display: none;
+  }
+}
+
+.content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
